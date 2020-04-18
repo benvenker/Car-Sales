@@ -20,7 +20,7 @@ const AddedFeature = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  return state;
+  return state.car.features;
 };
 
 export default connect(mapStateToProps, { removeFeature })(AddedFeature);
