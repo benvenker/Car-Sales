@@ -21,8 +21,8 @@ export const reducer = (state = initialState, action) => {
     case "BUY_ITEM":
       console.log("buy item reducer");
       return {
-        additionalPrice: state.additionalPrice + action.payload.price,
         ...state,
+        additionalPrice: state.additionalPrice + action.payload.price,
         car: {
           ...state.car,
           features: [...state.car.features, action.payload],
@@ -32,6 +32,7 @@ export const reducer = (state = initialState, action) => {
       console.log("remove feature reducer");
       return {
         ...state,
+        additionalPrice: state.additionalPrice - action.payload.price,
         car: {
           ...state.car,
           features: [
